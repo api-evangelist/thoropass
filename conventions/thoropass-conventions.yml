@@ -1,0 +1,36 @@
+generated: '2026-07-21'
+method: searched
+source: https://api.thoropass.com/.well-known/oauth-authorization-server
+authentication:
+  style: oauth2-authorization-code-pkce
+  bearer: 'Authorization: Bearer <access_token>'
+  token_endpoint: https://api.thoropass.com/oauth/token/
+  refresh: refresh_token grant supported
+  dynamic_client_registration: https://api.thoropass.com/oauth/register
+  scope_model: 'resource:action (e.g. audit:read, evidenceRequest:write)'
+  ref: authentication/thoropass-authentication.yml
+authorization:
+  scope_style: 'colon-delimited resource:action pairs, read/write split per resource'
+  scopes_ref: scopes/thoropass-scopes.yml
+agent_access:
+  mcp_server: https://api.thoropass.com/mcp
+  mcp_scope: mcp:invoke
+  ref: mcp/thoropass-mcp.yml
+versioning:
+  style: partner-api
+  notes: 'Partner API surfaced under app.thoropass.com/partner-api; no public version scheme observed in metadata'
+idempotency:
+  supported: unknown
+  notes: 'No public idempotency contract documented in the discoverable metadata (no OpenAPI published). Not asserted.'
+pagination:
+  supported: unknown
+  notes: 'Not documented in discoverable metadata; no public OpenAPI to derive from.'
+error_envelope:
+  format: unknown
+  notes: 'No public error reference / OpenAPI available to characterize the error envelope.'
+notes: >-
+  Cross-cutting semantics captured from the public OAuth 2.0 authorization-server
+  and protected-resource metadata. Thoropass does not publish a resolvable
+  developer docs host or OpenAPI at probe time, so request/response conventions
+  (idempotency, pagination, error envelope) could not be verified and are left as
+  unknown rather than fabricated.

@@ -1,0 +1,21 @@
+generated: '2026-07-21'
+method: searched
+source: live probes of Thoropass status + Partner API hosts
+versioning:
+  scheme: partner-api
+  current: partner-api
+  docs: https://docs.thoropass.com/mcp
+status_page: https://status.thoropass.com
+status_provider: Better Stack
+deprecation:
+  policy_url: null
+  sunset_header: unknown
+sla:
+  url: null
+  uptime_target: null
+deprecated_operations: []
+notes: >-
+  Thoropass publishes a live Better Stack status page at status.thoropass.com. No
+  public deprecation policy, Sunset/Deprecation header contract, or SLA document was
+  discoverable (no resolvable developer docs host at probe time), so those are left
+  null rather than fabricated.

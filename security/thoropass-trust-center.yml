@@ -1,0 +1,13 @@
+generated: '2026-07-21'
+method: searched
+probe: true
+url: https://trust.thoropass.com/
+evidence:
+- {source: 'https://trust.thoropass.com/', status: 200, title: 'Trust Center'}
+certifications: []
+notes: >-
+  Thoropass publishes a public Trust Center at trust.thoropass.com (verified 200,
+  page title "Trust Center"). The page is JavaScript-rendered, so the specific named
+  certifications could not be machine-extracted from the raw HTML and are left empty
+  rather than fabricated. Thoropass is itself a compliance-audit firm; a follow-up
+  render pass can enumerate the exact certs it publishes.

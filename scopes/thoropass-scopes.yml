@@ -1,0 +1,36 @@
+generated: '2026-07-21'
+method: searched
+source: https://api.thoropass.com/.well-known/oauth-authorization-server
+docs: https://docs.thoropass.com/mcp
+schemes:
+- name: OAuth2
+  source: https://api.thoropass.com/.well-known/oauth-authorization-server
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://app.thoropass.com/partner-api
+    tokenUrl: https://api.thoropass.com/oauth/token/
+scopes:
+- {scope: 'alertConfiguration:read',  description: Read compliance monitoring alert configurations}
+- {scope: 'alertConfiguration:write', description: Manage compliance monitoring alert configurations}
+- {scope: 'alertEvent:read',          description: Read triggered monitoring alert events}
+- {scope: 'alertEvent:write',         description: Manage/acknowledge monitoring alert events}
+- {scope: 'integrationUser:read',     description: Read integration (service) user records}
+- {scope: 'integrationUser:write',    description: Manage integration (service) user records}
+- {scope: 'device:read',              description: Read managed device / endpoint inventory}
+- {scope: 'device:write',             description: Manage device / endpoint inventory records}
+- {scope: 'changeRequest:read',       description: Read change requests}
+- {scope: 'changeRequest:write',      description: Create or update change requests}
+- {scope: 'training:read',            description: Read security-awareness training records}
+- {scope: 'training:write',           description: Manage security-awareness training records}
+- {scope: 'vulnerabilityScanConfiguration:read',  description: Read vulnerability-scan configurations}
+- {scope: 'vulnerabilityScanConfiguration:write', description: Manage vulnerability-scan configurations}
+- {scope: 'vulnerabilityScan:read',   description: Read vulnerability scans}
+- {scope: 'vulnerabilityScan:write',  description: Trigger or manage vulnerability scans}
+- {scope: 'vulnerability:read',        description: Read discovered vulnerabilities}
+- {scope: 'vulnerability:write',       description: Manage / triage discovered vulnerabilities}
+- {scope: 'audit:read',                description: Read audit records and audit lifecycle state}
+- {scope: 'audit:write',               description: Manage audit records and audit lifecycle}
+- {scope: 'evidenceRequest:read',      description: Read auditor evidence requests}
+- {scope: 'evidenceRequest:write',     description: Fulfill / respond to auditor evidence requests}
+- {scope: 'globalControl:read',        description: Read the global control library}
+- {scope: 'mcp:invoke',                description: Invoke tools on the Thoropass hosted MCP server}

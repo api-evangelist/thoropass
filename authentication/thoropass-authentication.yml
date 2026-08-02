@@ -1,0 +1,38 @@
+generated: '2026-07-21'
+method: searched
+source: https://api.thoropass.com/.well-known/oauth-authorization-server
+docs: https://docs.thoropass.com/mcp
+summary:
+  types:
+  - oauth2
+  oauth2_flows:
+  - authorizationCode
+  pkce: true
+  dynamic_client_registration: true
+schemes:
+- name: OAuth2
+  type: oauth2
+  issuer: https://api.thoropass.com
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://app.thoropass.com/partner-api
+    tokenUrl: https://api.thoropass.com/oauth/token/
+    refreshUrl: https://api.thoropass.com/oauth/token/
+  grant_types_supported:
+  - authorization_code
+  - refresh_token
+  response_types_supported:
+  - code
+  code_challenge_methods_supported:
+  - S256
+  token_endpoint_auth_methods_supported:
+  - none
+  - client_secret_basic
+  - client_secret_post
+  revocation_endpoint: https://api.thoropass.com/oauth/revoke-token/
+  registration_endpoint: https://api.thoropass.com/oauth/register   # RFC 7591 dynamic client registration
+notes: >-
+  Thoropass Partner API uses OAuth 2.0 Authorization Code with PKCE (S256) and
+  refresh tokens. Public clients are supported (token_endpoint_auth_method "none")
+  alongside confidential clients (client_secret_basic/post). Dynamic client
+  registration (RFC 7591) is offered. Scope reference: scopes/thoropass-scopes.yml.

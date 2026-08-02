@@ -1,0 +1,1 @@
+{"resource":"https://api.thoropass.com/mcp","authorization_servers":["https://api.thoropass.com"],"scopes_supported":["mcp:invoke","audit:read","evidenceRequest:read","evidenceRequest:write","globalControl:read"],"bearer_methods_supported":["header"],"resource_documentation":"https://docs.thoropass.com/mcp"}

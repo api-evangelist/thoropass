@@ -1,0 +1,30 @@
+generated: '2026-07-21'
+method: searched
+status: published
+source: https://api.thoropass.com/.well-known/oauth-protected-resource
+server:
+  name: thoropass
+  transport: http
+  url: https://api.thoropass.com/mcp
+  documentation: https://docs.thoropass.com/mcp   # documented resource_documentation (not publicly resolving at probe time)
+authorization:
+  type: oauth2
+  authorization_servers:
+  - https://api.thoropass.com
+  bearer_methods_supported:
+  - header
+  www_authenticate: 'Bearer realm="thoropass", resource_metadata="https://api.thoropass.com/.well-known/oauth-protected-resource"'
+  scopes_supported:
+  - mcp:invoke
+  - audit:read
+  - evidenceRequest:read
+  - evidenceRequest:write
+  - globalControl:read
+notes: >-
+  Thoropass runs a hosted, OAuth-protected MCP server. The endpoint returns HTTP 401
+  with an RFC 9728 protected-resource pointer until a bearer token carrying the
+  mcp:invoke scope is presented. Tool inventory is only exposed to authenticated
+  clients over the live MCP session and is therefore not enumerated here (no
+  fabrication). The compliance/audit scopes above (audit, evidenceRequest,
+  globalControl) indicate the domains the agent surface can act on.
+tools: []

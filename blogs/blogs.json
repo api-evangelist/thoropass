@@ -1,0 +1,14 @@
+{
+  "repo": "thoropass",
+  "feeds": [
+    {
+      "source": "https://help.thoropass.com/",
+      "feed_url": "https://help.thoropass.com/feed.xml",
+      "title": "",
+      "saved": 9,
+      "method": "discovered"
+    }
+  ],
+  "post_count": 9,
+  "fetched": "2026-08-01T15:49:00Z"
+}

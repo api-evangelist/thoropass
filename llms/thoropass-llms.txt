@@ -1,0 +1,36 @@
+# Thoropass
+
+> Thoropass is an auditor-led, AI-powered compliance and audit automation platform. It combines software (continuous compliance monitoring, evidence collection, vulnerability scanning, penetration testing) with expert auditor services to help companies achieve and maintain SOC 2, ISO 27001, HIPAA, PCI DSS, HITRUST and related frameworks. Thoropass exposes a Partner API secured with OAuth 2.0 and a hosted, OAuth-protected Model Context Protocol (MCP) server for agent access. Backed by Bain Capital Ventures.
+
+## API
+- Partner API (OAuth 2.0 Authorization Code + PKCE): https://api.thoropass.com
+- Authorization server metadata (RFC 8414): https://api.thoropass.com/.well-known/oauth-authorization-server
+- Token endpoint: https://api.thoropass.com/oauth/token/
+- Dynamic client registration (RFC 7591): https://api.thoropass.com/oauth/register
+- Token revocation (RFC 7009): https://api.thoropass.com/oauth/revoke-token/
+
+## MCP
+- Hosted MCP server (OAuth-protected, scope mcp:invoke): https://api.thoropass.com/mcp
+- Protected-resource metadata (RFC 9728): https://api.thoropass.com/.well-known/oauth-protected-resource
+- MCP documentation: https://docs.thoropass.com/mcp
+
+## Artifacts
+- Authentication profile: authentication/thoropass-authentication.yml
+- OAuth scopes (25): scopes/thoropass-scopes.yml
+- API conventions: conventions/thoropass-conventions.yml
+- Standards conformance: conformance/thoropass-conformance.yml
+- Well-known index: well-known/thoropass-well-known.yml
+- Lifecycle / status: lifecycle/thoropass-lifecycle.yml
+- Domain security: security/thoropass-domain-security.yml
+- Trust center: security/thoropass-trust-center.yml
+
+## Docs
+- Website: https://thoropass.com/
+- Platform integrations & APIs: https://www.thoropass.com/platform/integrations
+- Help Center: https://help.thoropass.com/
+- Blog: https://www.thoropass.com/learn/blog
+- Pricing: https://www.thoropass.com/pricing
+- Trust Center: https://trust.thoropass.com/
+- Status: https://status.thoropass.com/
+- Terms: https://thoropass.com/terms-and-conditions/
+- Privacy: https://www.thoropass.com/privacy-policy
