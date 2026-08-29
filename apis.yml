@@ -11,6 +11,17 @@ description: >-
   registration) and a hosted, OAuth-protected Model Context Protocol (MCP) server for
   AI-agent access to audits, evidence requests, controls, alerts, devices and
   vulnerability data. Thoropass (formerly Laika) is backed by Bain Capital Ventures.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: self-serve
