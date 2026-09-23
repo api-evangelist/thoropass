@@ -2,23 +2,30 @@ generated: '2026-07-21'
 method: searched
 source: live probes of /.well-known/ on Thoropass hosts
 host: https://api.thoropass.com
-documents:
-- path: /.well-known/oauth-authorization-server   # RFC 8414
-  status: 200
-  file: thoropass-oauth-authorization-server.json
-- path: /.well-known/oauth-protected-resource      # RFC 9728 (MCP resource metadata)
-  status: 200
-  file: thoropass-oauth-protected-resource.json
-- path: /.well-known/openid-configuration           # OIDC discovery
-  status: 404
-- path: /.well-known/security.txt                    # RFC 9116
-  status: 404
-- path: /.well-known/api-catalog                     # RFC 9727
-  status: 404
-- path: /.well-known/ai-plugin.json
-  status: 404
 other_hosts:
 - host: https://thoropass.com
-  notes: '/.well-known/* redirect (301) to www and resolve 404; no security.txt published'
+  notes: /.well-known/* redirect (301) to www and resolve 404; no security.txt published
 - host: https://app.thoropass.com
-  notes: 'no /.well-known/ documents (404)'
+  notes: no /.well-known/ documents (404)
+hosts:
+- host: https://api.thoropass.com
+  documents:
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    file: thoropass-oauth-authorization-server.json
+  - path: /.well-known/oauth-protected-resource
+    status: 200
+    file: thoropass-oauth-protected-resource.json
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+x-shape-fix:
+  converted: '2026-08-20'
+  from: documents
+  note: Rewritten into hosts[] -> documents[], the only shape well_known_docs() in score.rb reads. A served
+    .well-known surface recorded in any other shape scores as absent.
