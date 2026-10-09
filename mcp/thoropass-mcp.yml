@@ -33,3 +33,27 @@ deployment:
   probe: gated
   checked: '2026-08-12'
   source: catalog MCP census
+rfc9728:
+  endpoint: https://api.thoropass.com/mcp
+  metadata_url: https://api.thoropass.com/.well-known/oauth-protected-resource
+  discovered_via: WWW-Authenticate resource_metadata on an anonymous POST initialize
+  fetched: '2026-09-25'
+  http_status: 200
+  content_type: application/json
+  document:
+    resource: https://api.thoropass.com/mcp
+    authorization_servers:
+    - https://api.thoropass.com
+    scopes_supported:
+    - mcp:invoke
+    - audit:read
+    - evidenceRequest:read
+    - evidenceRequest:write
+    - globalControl:read
+    - policy:read
+    - user:read
+    - monitor:read
+    - integration:read
+    bearer_methods_supported:
+    - header
+    resource_documentation: https://docs.thoropass.com/mcp
